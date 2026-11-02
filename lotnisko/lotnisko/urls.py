@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from lotapp import views as LotAppViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',LotAppViews.index,name='index'),
 ]
